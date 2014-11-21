@@ -1,0 +1,5 @@
+<%= link_to "Make A New Habit", new_habit_path %>
+
+<% @habits.each do |habit| %>
+  <p>Goal: <%= habit.goal %></p>
+<% end %>
