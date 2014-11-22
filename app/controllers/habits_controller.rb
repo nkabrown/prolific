@@ -1,7 +1,8 @@
 class HabitsController < ApplicationController
+  before_filter :authenticate
 
   def index
-    @habits = Habit.all
+    @habits = Habit.where(email: session[:current_email])
   end
 
   def new
@@ -9,7 +10,7 @@ class HabitsController < ApplicationController
   end
 
   def create
-    @habit = Habit.create(habit_params)
+    @habit = Habit.create(habit_params.merge(email: session[:current_email]))
     redirect_to root_path
   end
 
