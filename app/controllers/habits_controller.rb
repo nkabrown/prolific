@@ -1,4 +1,5 @@
 class HabitsController < ApplicationController
+  before_filter :authenticate
 
   def index
     @habits = Habit.all
