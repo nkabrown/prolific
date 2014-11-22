@@ -1,4 +1,9 @@
+<% @mottos.each do |motto| %>
+  <h2><%= motto.content %></h2>
+<% end %>
+
 <%= link_to "Make A New Habit", new_habit_path %>
+<%= link_to "Make A Motto", new_motto_path %>
 
 <% @habits.each do |habit| %>
   <p>Goal: <%= habit.goal %></p>
