@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141121215926) do
+ActiveRecord::Schema.define(version: 20141122040408) do
 
   create_table "habits", force: true do |t|
     t.string   "goal"
@@ -19,6 +19,7 @@ ActiveRecord::Schema.define(version: 20141121215926) do
     t.string   "routine"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "email"
   end
 
 end
