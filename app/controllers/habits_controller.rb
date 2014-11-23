@@ -13,7 +13,7 @@ class HabitsController < ApplicationController
 
   def create
     current_user.habits.create(habit_params)
-    redirect_to root_path
+    redirect_to habits_path
   end
 
   def edit
@@ -22,12 +22,12 @@ class HabitsController < ApplicationController
 
   def update
     @habit.update_attributes(habit_params)
-    redirect_to root_path
+    redirect_to habits_path
   end
 
   def destroy
     @habit.destroy
-    redirect_to root_path
+    redirect_to habits_path
   end
 
   private

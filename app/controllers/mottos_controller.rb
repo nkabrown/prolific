@@ -8,7 +8,7 @@ class MottosController < ApplicationController
 
   def create
     current_user.mottos.create(motto_params)
-    redirect_to root_path
+    redirect_to habits_path
   end
 
   def edit
@@ -17,12 +17,12 @@ class MottosController < ApplicationController
 
   def update
     @motto.update_attributes(motto_params)
-    redirect_to root_path
+    redirect_to habits_path
   end
 
   def destroy
     @motto.destroy
-    redirect_to root_path
+    redirect_to habits_path
   end
 
   private
