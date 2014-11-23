@@ -9,4 +9,9 @@ class SessionsController < ApplicationController
     redirect_to habits_path
   end
 
+  def destroy
+    session[:current_email] = nil
+    redirect_to root_path
+  end
+
 end
