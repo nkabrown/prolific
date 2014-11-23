@@ -8,6 +8,10 @@ class User
     Habit.where(email: @email)
   end
 
+  def mottos
+    Motto.where(email: @email)
+  end
+
   def signed_in?
     @email.present?
   end
