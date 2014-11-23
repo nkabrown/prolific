@@ -6,6 +6,7 @@ module Features
 
   def sign_in_as(email)
     visit root_path
+    click_on "Sign In"
     fill_in "Email", with: email
     click_on "Sign In"
   end

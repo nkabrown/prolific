@@ -6,6 +6,11 @@ class SessionsController < ApplicationController
 
   def create
     sign_in_as params[:session][:email]
+    redirect_to habits_path
+  end
+
+  def destroy
+    session[:current_email] = nil
     redirect_to root_path
   end
 
