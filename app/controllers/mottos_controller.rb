@@ -1,6 +1,6 @@
 class MottosController < ApplicationController
   before_filter :authenticate
-  before_action :set_motto, only: [:edit, :update]
+  before_action :set_motto, only: [:edit, :update, :destroy]
 
   def new
     @motto = Motto.new
@@ -17,6 +17,11 @@ class MottosController < ApplicationController
 
   def update
     @motto.update_attributes(motto_params)
+    redirect_to root_path
+  end
+
+  def destroy
+    @motto.destroy
     redirect_to root_path
   end
 
