@@ -1,0 +1,9 @@
+<%= form_for @habit do |f| %>
+  <%= f.label :goal %>
+  <%= f.text_field :goal %>
+  <%= f.label :step %>
+  <%= f.text_field :step %>
+  <%= f.label :routine %>
+  <%= f.text_field :routine %>
+  <%= f.submit "Update" %>
+<% end %>

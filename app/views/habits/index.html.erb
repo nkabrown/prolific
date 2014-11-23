@@ -7,4 +7,6 @@
 
 <% @habits.each do |habit| %>
   <p>Goal: <%= habit.goal %></p>
+  <%= link_to "Edit", edit_habit_path(habit) %>
 <% end %>
+
