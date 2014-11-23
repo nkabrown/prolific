@@ -1,6 +1,6 @@
 class HabitsController < ApplicationController
   before_filter :authenticate
-  before_action :set_habit, only: [:edit, :update]
+  before_action :set_habit, only: [:edit, :update, :destroy]
 
   def index
     @habits = current_user.habits
@@ -22,6 +22,11 @@ class HabitsController < ApplicationController
 
   def update
     @habit.update_attributes(habit_params)
+    redirect_to root_path
+  end
+
+  def destroy
+    @habit.destroy
     redirect_to root_path
   end
 
