@@ -9,4 +9,5 @@ module Features
     fill_in "Email", with: email
     click_on "Sign In"
   end
+
 end

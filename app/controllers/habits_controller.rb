@@ -3,7 +3,7 @@ class HabitsController < ApplicationController
 
   def index
     @habits = current_user.habits
-    @mottos = Motto.all
+    @mottos = current_user.mottos
   end
 
   def new
