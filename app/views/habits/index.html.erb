@@ -1,5 +1,7 @@
 <% @mottos.each do |motto| %>
   <h2><%= motto.content %></h2>
+  <%= link_to "Edit", edit_motto_path(motto) %>
+  <%= link_to "Delete", motto_path(motto), method: :delete %>
 <% end %>
 
 <%= link_to "Make A New Habit", new_habit_path %>
