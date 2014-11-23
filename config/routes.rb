@@ -4,6 +4,6 @@ Rails.application.routes.draw do
 
   resources :habits, only: [:index, :new, :create, :edit, :update, :destroy]
   resource :session, only: [:new, :create]
-  resources :mottos, only: [:new, :create]
+  resources :mottos, only: [:new, :create, :edit, :update]
 
 end
